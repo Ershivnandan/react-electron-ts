@@ -1,50 +1,124 @@
-# React + TypeScript + Vite
+# Electron + Vite + React + TypeScript Project By Shiv
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a cross-platform application setup combining Electron, Vite, React, and TypeScript. It is designed for building desktop applications compatible with **Mac**, **Windows**, and **Linux**. This setup includes build commands and a streamlined development environment. 🚀
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 Project Structure
 
-## Expanding the ESLint configuration
+Below is the folder structure of the project:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![Project Folder Structure](./folder-structure.png)
 
-- Configure the top-level `parserOptions` property like this:
+### Key Directories and Files:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **`src/electron`**: Contains the Electron-specific files, such as `main.ts` and `preload.cjs`.
+- **`src/ui`**: Houses the React-based user interface components.
+- **`electron-builder.json`**: Configuration for building the application for different platforms.
+- **`vite.config.ts`**: Configuration for the Vite bundler.
+- **`tsconfig.*.json`**: TypeScript configuration files for different parts of the project.
+- **`scripts`**: NPM scripts to handle development, builds, and testing.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js** (>= 18.x)
+- **npm** (>= 8.x)
+- **Git**
+
+---
+
+### 🛠️ Setting Up the Project
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the Development Server**
+
+   To run both React and Electron in parallel:
+
+   ```bash
+   npm run dev
+   ```
+
+   This script will:
+   - Start the React development server with Vite.
+   - Launch Electron in development mode.
+
+---
+
+## 📦 Building the Application
+
+You can build the application for different platforms using the following commands:
+
+### For macOS (ARM64)
+
+```bash
+npm run dist:mac
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### For Windows (x64)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run dist:win
 ```
+
+### For Linux (x64)
+
+```bash
+npm run dist:linux
+```
+
+The build files will be generated in the `dist-electron` folder.
+
+---
+
+## 🧪 Testing
+
+### End-to-End Tests
+
+```bash
+npm run test:e2e
+```
+
+### Unit Tests
+
+```bash
+npm run test:unit
+```
+
+---
+
+## 🤔 Additional Notes
+
+- **Playwright** is used for end-to-end testing.
+- **Vitest** is used for unit testing.
+- **Tailwind CSS** is integrated for styling.
+- The `electron-builder.json` file is configured to generate platform-specific executables.
+
+### 🔧 Customization
+
+Feel free to modify the configuration files to fit your project's requirements. For example:
+
+- **`vite.config.ts`**: Adjust the Vite bundler settings.
+- **`electron-builder.json`**: Customize the build options like app name, icons, and output paths.
+
+---
+
+### Youtube:  8BitCode!
+
