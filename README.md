@@ -8,7 +8,8 @@ This project is a cross-platform application setup combining Electron, Vite, Rea
 
 Below is the folder structure of the project:
 
-`project-root/
+```
+project-root/
 ├── dist-electron/
 ├── dist-react/
 ├── node_modules/
@@ -21,12 +22,12 @@ Below is the folder structure of the project:
 │   │   ├── tsconfig.json
 │   │   └── util.ts
 │   ├── ui/
-│       ├── assets/
-│       ├── App.css
-│       ├── App.tsx
-│       ├── index.css
-│       ├── main.tsx
-│       └── vite-env.d.ts
+│   │   ├── assets/
+│   │   ├── App.css
+│   │   ├── App.tsx
+│   │   ├── index.css
+│   │   ├── main.tsx
+│   │   └── vite-env.d.ts
 ├── .gitignore
 ├── desktopIconImage.png
 ├── electron-builder.json
@@ -41,7 +42,8 @@ Below is the folder structure of the project:
 ├── tsconfig.json
 ├── tsconfig.node.json
 ├── types.d.ts
-└── vite.config.ts`
+└── vite.config.ts
+```
 
 ### Key Directories and Files:
 
@@ -71,8 +73,8 @@ Make sure you have the following installed:
 1. **Clone the Repository**
 
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone <https://github.com/Ershivnandan/react-electron-ts.git>
+   cd <react-electron-ts>
    ```
 
 2. **Install Dependencies**
@@ -154,4 +156,6 @@ Feel free to modify the configuration files to fit your project's requirements. 
 ---
 
 ### Youtube:  8BitCode!
+
+
 
