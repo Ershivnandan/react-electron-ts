@@ -8,7 +8,40 @@ This project is a cross-platform application setup combining Electron, Vite, Rea
 
 Below is the folder structure of the project:
 
-![Project Folder Structure](./folder-structure.png)
+`project-root/
+├── dist-electron/
+├── dist-react/
+├── node_modules/
+├── src/
+│   ├── electron/
+│   │   ├── main.ts
+│   │   ├── pathresolver.ts
+│   │   ├── preload.cjs
+│   │   ├── resourceManager.ts
+│   │   ├── tsconfig.json
+│   │   └── util.ts
+│   ├── ui/
+│       ├── assets/
+│       ├── App.css
+│       ├── App.tsx
+│       ├── index.css
+│       ├── main.tsx
+│       └── vite-env.d.ts
+├── .gitignore
+├── desktopIconImage.png
+├── electron-builder.json
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.ts
+├── README.md
+├── tailwind.config.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── types.d.ts
+└── vite.config.ts`
 
 ### Key Directories and Files:
 
