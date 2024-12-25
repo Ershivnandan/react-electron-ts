@@ -73,8 +73,8 @@ Make sure you have the following installed:
 1. **Clone the Repository**
 
    ```bash
-   git clone <https://github.com/Ershivnandan/react-electron-ts.git>
-   cd <react-electron-ts>
+   git clone https://github.com/Ershivnandan/react-electron-ts.git
+   cd react-electron-ts
    ```
 
 2. **Install Dependencies**
