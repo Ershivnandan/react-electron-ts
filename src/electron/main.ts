@@ -1,12 +1,16 @@
-import {app, BrowserWindow} from "electron";
+import {app, BrowserWindow, ipcMain} from "electron";
 // we will use "path" because Mac device need forword slashes (/) but window need backword slash (\) to read path 
 import path from "path"
 import { isDev } from "./util.js";
-
-type test = string;
+import { getStaticData, pollResources } from "./resourceManager.js";
+import { getPreloadPath } from "./pathresolver.js";
 
 app.on("ready", ()=>{
-    const mainWindow = new BrowserWindow({});
+    const mainWindow = new BrowserWindow({
+        webPreferences: {
+            preload: getPreloadPath(),
+        }
+    });
     mainWindow.webContents.openDevTools();
 
     if(isDev()){
@@ -16,5 +20,11 @@ app.on("ready", ()=>{
     mainWindow.loadFile(path.join(app.getAppPath(), '/dist-react/index.html'))
 
     }
+
+    pollResources(mainWindow);
+
+    ipcMain.handle("getStaticData", ()=>{
+        return getStaticData();
+    })
 
 })
