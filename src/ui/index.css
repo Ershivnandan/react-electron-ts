@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root{
+  background: rgb(15, 15, 15);
+}
+
+.animate-marquee {
+  animation: marquee 10s linear infinite;
+  /* Adjust duration and timing function as needed */
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+}
