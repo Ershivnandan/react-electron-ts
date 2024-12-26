@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "composite": true,
     "types": ["./types"],
     "target": "ESNext",
     "useDefineForClassFields": true,
